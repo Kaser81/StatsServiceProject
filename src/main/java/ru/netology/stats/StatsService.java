@@ -41,46 +41,23 @@ public class StatsService {
     public int underAvg(int[] sales) {
         int num = 0;
         for (int sale : sales) {
-            if (sale < calculateAvg(sales)){
-                num++;
-            }
-        }
-            return num;
-        }
-
-    public int overAvg(int[] sales) {
-        int num = 0;
-        for (int sale : sales) {
-            if (sale > calculateAvg(sales)){
+            if (sale < calculateAvg(sales)) {
                 num++;
             }
         }
         return num;
     }
+
+    public int overAvg(int[] sales) {
+        int num = 0;
+        for (int sale : sales) {
+            if (sale > calculateAvg(sales)) {
+                num++;
+            }
+        }
+        return num;
     }
+}
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-//if (sale < calculateAvg(sales))
-//        int minMonth = 0;
-//        int month = 0;
-//        for (int sale : sales) {
-//            if (sale <= sales[minMonth]) {
-//                minMonth = month;
-//            }
-//            month = month + 1;
-//        }
-//        return minMonth + 1;
